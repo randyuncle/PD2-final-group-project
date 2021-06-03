@@ -20,7 +20,7 @@ public class RuntimeSettings {
     public static void loadRuntimeSettings(int w, int h) {
         gameFieldWidth  = w;
         gameFieldHeight = h;
-      //考慮主角和敵人的寬度和高度(目前是30*30 png)
+      //考慮主角和敵人的寬度和高度
         maxPlayerPositionX = w - gamesettings.Settings.PLAYER_WIDTH;
         maxPlayerPositionY = h - gamesettings.Settings.PLAYER_HEIGHT;
         maxBulletPositionX = w; //也就是子彈不會超過地圖的邊界

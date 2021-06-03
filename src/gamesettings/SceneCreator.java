@@ -20,8 +20,8 @@ import javafx.scene.text.TextAlignment;
 import net.*;
 
 /**
- * ��銝剖���4��嚗tartScene, GamePlayScene, PauseScene(press T), GameOverScene
- * ��隞亙��4�ethod
+ * 遊戲中共有4個場景：StartScene, GamePlayScene, PauseScene(press T), GameOverScene
+ * 所以創造4個method
  * The SceneCreator creates scenes that will be used during the runtime of the
  * program. Think of scenes as different screens in the game. For example, the
  * scene of which we play the game in is called the "Main Game Scene" and the
@@ -44,10 +44,11 @@ public class SceneCreator {
         
         Text paused = new Text("Paused");
         paused.setFont(new Font(50));
-        paused.setFill(Color.WHITE);
+        paused.setFill(Color.BLACK);
         
         // Resume button for when user wants to resume gameplay.
         Button resumeButton = new Button("Resume");
+        resumeButton.setFont(new Font(30));
         resumeButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
@@ -56,7 +57,8 @@ public class SceneCreator {
         });
 
         // Main menu button for when user wants to go to the main menu.
-        Button mainMenuButton = new Button("Main Menu");
+        Button mainMenuButton = new Button("Back to Lobby");
+        mainMenuButton.setFont(new Font(30));
         mainMenuButton.setOnAction(new EventHandler<ActionEvent>() {
            @Override
            public void handle(ActionEvent e) {
@@ -163,7 +165,7 @@ public class SceneCreator {
         line1.setFont(new Font(30));
         line1.setFill(Color.BLACK);
         
-        Text line2 = new Text("2、Keys to control characters : w (UP), s (DOWN), a (LEFT), d (RIGHT)\n");
+        Text line2 = new Text("2、Keys to control the character : w (UP), s (DOWN), a (LEFT), d (RIGHT)\n");
         line2.setFont(new Font(30));
         line2.setFill(Color.BLACK);
         
@@ -171,6 +173,11 @@ public class SceneCreator {
         line3.setFont(new Font(30));
         line3.setTextAlignment(TextAlignment.CENTER);
         line3.setFill(Color.BLACK);
+        
+        Text line4 = new Text("4、During battle : Press 't' to puase\n");
+        line4.setFont(new Font(30));
+        line4.setTextAlignment(TextAlignment.CENTER);
+        line4.setFill(Color.BLACK);
         
         Button back = new Button("back");
         back.setFont(new Font(30));
@@ -202,9 +209,13 @@ public class SceneCreator {
         GridPane.setHalignment(line3, HPos.CENTER);
         GridPane.setMargin(line3, new Insets(5,7,5,7));
         
-        gridPane.add(back, 0, 4);
+        gridPane.add(line4, 0, 4);
+        GridPane.setHalignment(line4, HPos.CENTER);
+        GridPane.setMargin(line4, new Insets(5,7,5,7));
+        
+        gridPane.add(back, 0, 5);
         GridPane.setHalignment(back, HPos.CENTER);
-        GridPane.setMargin(rule, new Insets(5,7,5,7));
+        GridPane.setMargin(back, new Insets(5,7,5,7));
         
         gridPane.setStyle("-fx-background-image: url(\"/backgroundProRu.png\");");
         

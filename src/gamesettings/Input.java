@@ -72,7 +72,7 @@ public class Input {
     
     /**
      * Constructor method for the Input class. This class will handle all events
-     * that pertain to(å±¬æ–¼) the functionality of the main player.
+     * that pertain to(Äİ©ó) the functionality of the main player.
      *
      * @param scene The scene where the listeners should be added.
      * @param playerField The Pane that the player is on.
@@ -85,7 +85,7 @@ public class Input {
 
     
     /**
-     * ordinal é †åºæ•¸
+     * ordinal¶¶§Ç¼Æ•¸
      * Sets the bit at position e.getCode().ordinal() to true (1).
      *
      * */
@@ -176,7 +176,7 @@ public class Input {
                     long time = now / 1000000;
                     
                     if (time - previousTime >= Settings.BULLET_FIRING_DELAY) {
-                        //mousePressedEvent.getX()è¡¨ç¤ºå­å½ˆæœæ»‘é¼ æŒ‡å‘çš„æ–¹å‘å°„æ“Š
+                    	//mousePressedEvent.getX()ªí¥Ü¤l¼u´Â·Æ¹««ü¦Vªº¤è¦V®gÀ»
                         new Bullet(GameManager.mainPlayer.getCenterX(),
                                     GameManager.mainPlayer.getCenterY(),
                                     mousePressedEvent.getX(), 
@@ -263,7 +263,7 @@ public class Input {
      * @param e The mouse event that holds the mouse pointer's x,y coordinates.
      */
     public void updateAngle(MouseEvent e) {
-        //e.getX()è¡¨ç¤ºæ»‘é¼ æŒ‡å‘çš„æ–¹å‘
+        //e.getX()ªí¥Ü·Æ¹««ü¦Vªº¤è¦V
         playerAngle = GameMath.calculateAngle(
                 GameManager.mainPlayer.getCenterX(), 
                 GameManager.mainPlayer.getCenterY(), 

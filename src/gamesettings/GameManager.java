@@ -116,7 +116,7 @@ public class GameManager {
             long previousTime2 = 0; // Used for cleaning the dead enemy bodies.
 
             /*
-                This will control all animations pertaining to(撅祆) the main player and
+                This will control all animations pertaining to the main player and
                 to the enemies.
             */
             @Override
